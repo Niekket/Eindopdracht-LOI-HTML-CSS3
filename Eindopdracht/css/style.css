@@ -1,0 +1,965 @@
+@import url(/css/normalize.css);
+@import url(/css/reset.css);
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    font-family: 'Muli', sans-serif;
+}
+
+
+/******* Header *******/
+
+nav {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.header-home {
+    height: 40vh;
+    background-image: url(../img/header.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.logo {
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 20px;
+    padding: 8px 10px;
+    background-image: url(../img/Logo.jpg);
+    background-size: cover;
+    background-position: left;
+    text-decoration: none;
+    color: #ffffff;
+    text-shadow: 1px 1px #474747;
+    text-transform: uppercase;
+
+
+}
+
+.show-menu {
+    position: relative;
+    text-align: center;
+    display: block;
+    background-color: #286266;
+    color: white;
+    padding: 20px;
+}
+
+.show-menu::after {
+    content: "";
+    color: #d13e3e;
+    cursor: pointer;
+}
+
+input[type=checkbox]:checked ~ .show-menu::after {
+    content: "x";
+    position: relative;
+    left: 10px;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]:checked ~ .navigatie {
+    display: flex;
+    flex-direction: column;
+    background-color: #474747;
+    max-height: 230px;
+    overflow: scroll;
+}
+
+.navigatie {
+    display: none;
+    text-align: center;
+    background-color: #286266;
+}
+
+.current-page {
+    color: #474747 !important;
+    background-color: #efefef !important;
+}
+
+.current-page a {
+    color: #474747 !important;
+}
+
+.current-page ul li a {
+    color: #ffffff !important;
+}
+
+
+.navigatie li {
+    border-bottom: 1px solid #ffffff;
+    background-color: #474747;
+    color: #ffffff;
+}
+
+.navigatie li a {
+    height: 50px;
+    line-height: 60px;
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.navigatie li:nth-child(2) ul {
+    border-top: 1px solid #ffffff;
+}
+
+.navigatie li:nth-child(2) ul li {
+    background-color: #286266;
+}
+
+
+.google-maps {
+    position: relative;
+    height: 30vh;
+    width: 100vw;
+    padding: 0;
+    top: 55px;
+}
+
+/******* End-Header *******/
+
+/******* Main-Content-Home *******/
+
+
+.section-content {
+    margin: 20px;
+}
+
+.section-content div {
+    margin-top: 30px;
+}
+
+.section-content h1 {
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #286266;
+}
+
+.section-content p {
+    margin-top: 10px;
+    color: #474747;
+}
+
+.section-media {
+    margin: 40px 20px 40px 20px;
+}
+
+.border {
+    border-top: 1px solid black;
+
+}
+
+.section-media h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    margin: 20px 0;
+    color: #286266;
+}
+
+.media-blok {
+    position: relative;
+    padding-bottom: 50%;
+    flex: 1 100%;
+    margin-bottom: 20px;
+}
+
+iframe,
+video,
+.media-blok img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.section-three-blok {
+    margin: 40px 20px 40px 20px;
+}
+
+
+.section-three-blok figure {
+    background-color: #e7e7e7;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 25px 0;
+}
+
+.section-three-blok figure a:hover {
+    transform: scale(1.03);
+}
+
+.section-three-blok figure a {
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+    transition: all 0.5s ease;
+}
+
+.section-three-blok figure a span {
+    top: 40%;
+    left: 35%;
+    background-color: #286266;
+    padding: 10px 20px;
+    color: #ffffff;
+    position: absolute;
+    opacity: 0;
+    transform: scale(0);
+    transition: transform 0.3s ease-out
+}
+
+.section-three-blok figure a:hover span {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.section-three-blok figure img {
+    width: 100%;
+}
+
+.section-three-blok figure a:hover img {
+    opacity: 0.8;
+    transition: all 0.4s ease-in;
+}
+
+.section-three-blok figcaption h3 {
+    font-size: 20px;
+    border-bottom: 1px solid white;
+    width: 85%;
+    margin: 0 auto;
+    padding: 15px 0;
+    text-transform: uppercase;
+    color: #286266;
+
+}
+
+.section-three-blok figure figcaption p {
+    width: 85%;
+    margin: 0 auto;
+    font-size: 18px;
+    padding: 20px 0 0 0;
+    color: #474747;
+}
+
+
+/******* End-Main-Content-Home *******/
+
+
+/******* Main-Contact *******/
+
+.section-contact {
+    max-width: 80%;
+    margin: 80px auto 0 auto;
+}
+
+.section-contact h1 {
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 28px;
+    color: #286266;
+}
+
+
+.section-contact h1 + p {
+    text-align: center;
+    margin: 20px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #474747;
+}
+
+.section-contact form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.section-contact form label {
+    display: none;
+}
+
+.section-contact form input,
+textarea {
+    padding: 20px;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid black;
+}
+
+.section-contact form input:nth-of-type(3) {
+    margin-top: 15px;
+}
+
+.required::after {
+    position: relative;
+    top: 30px;
+    left: 5px;
+    content: "*";
+    opacity: 0.4;
+}
+
+::placeholder {
+    color: #474747;
+}
+
+
+.section-contact form textarea:focus,
+.section-contact form input:focus {
+    outline: none;
+}
+
+.section-contact div {
+    margin: 10px 0;
+    display: flow-root;
+}
+
+.section-contact div p {
+    text-align: center;
+    padding: 0 30px;
+    margin-bottom: 10px;
+    line-height: 3.5em;
+    color: #b2b2b2;
+}
+
+.contact-button-form {
+    border: 1px solid white;
+    color: #474747;
+    text-transform: uppercase;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+
+.contact-button-form:hover {
+    border: 1px solid rgba(71, 71, 71, 0.4);
+}
+
+.contact-button-form span {
+    position: relative;
+    opacity: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.contact-button-form:hover span {
+    position: relative;
+    display: inline-block;
+    left: 10px;
+    opacity: 1;
+}
+
+/******* End-Main-Contact *******/
+
+/******* Main-Auto-Vakantie *******/
+
+.section-autovakantie-table h1 {
+    max-width: 90%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #286266;
+}
+
+.section-autovakantie-table p {
+    max-width: 90%;
+    margin: 20px auto;
+    font-size: 16px;
+}
+
+.section-autovakantie-table {
+    margin: 80px auto;
+}
+
+.table-desktop {
+    display: none;
+}
+
+.table-mobile {
+    margin: 10px auto;
+}
+
+.empty {
+    height: 35px
+}
+
+.none {
+    display: none;
+}
+
+.table-mobile-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 90%;
+    margin: 60px auto;
+}
+
+thead {
+    color: white;
+    background-color: red;
+}
+
+thead td,
+tbody td {
+    padding: 10px;
+}
+
+.table-mobile tbody td {
+    display: block;
+}
+
+.table-mobile tbody {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+tbody tr {
+    background-color: #f6f6f6;
+}
+
+tbody tr:nth-of-type(odd) {
+    background: #e9e9e9;
+}
+
+
+/******* End-Main-Auto-Vakantie *******/
+
+
+/******* Main-Reisfoto's *******/
+
+.section-reisfotos {
+    margin: 80px auto 0 auto;
+}
+
+.section-reisfotos h1 {
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #286266;
+}
+
+.section-reisfotos p {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+
+.reisfotos-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px auto;
+}
+
+.reisfotos-container figure {
+    width: 90%;
+    margin: 5px auto;
+    position: relative;
+}
+
+.reisfotos-container figure img {
+    display: block;
+    width: 100%;
+}
+
+.reisfotos-container figure figcaption a {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+.reisfotos-container figure:hover figcaption a {
+    background-color: rgba(255, 255, 255, 0.4);
+}
+
+.reisfotos-container figcaption a p {
+    background-color: #286266;
+    padding: 10px;
+    color: #ffffff;
+    width: 60%;
+    margin: 0 auto;
+    transform: translateY(70px);
+    opacity: 0;
+}
+
+.reisfotos-container figure:hover figcaption a p {
+    opacity: 1;
+}
+
+/******* End-Main-Reisfoto's *******/
+
+
+/******* Main-Bestemmingen *******/
+
+.section-bestemmingen {
+    margin: 80px auto;
+}
+
+.section-bestemmingen h1 {
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #286266;
+}
+
+.section-bestemmingen > p {
+    text-align: center;
+    margin: 20px;
+    font-size: 18px;
+}
+
+
+.bestemmingen-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px auto;
+}
+
+.bestemmingen-container figure figcaption {
+    border-left: 1px solid rgba(40, 98, 102, 0.5);
+    border-right: 1px solid rgba(40, 98, 102, 0.5);
+    border-bottom: 1px solid rgba(40, 98, 102, 0.5);
+}
+
+.bestemmingen-container figure {
+    width: 90%;
+    margin: 5px auto;
+}
+
+.bestemmingen-container figcaption h2 {
+    font-size: 22px;
+    padding: 40px 20px 20px 20px;
+    color: #286266;
+}
+
+.bestemmingen-container figcaption p {
+    font-size: 16px;
+    padding: 20px;
+    line-height: 23px;
+}
+
+
+.bestemmingen-container figure img {
+    display: block;
+    width: 100%;
+}
+
+
+/******* End-Main-Bestemmingen *******/
+
+
+
+/******* Footer *******/
+
+footer {
+    text-align: center;
+    background-color: #286266;
+    margin-top: 30px;
+}
+
+footer p {
+    font-size: 14px;
+    padding: 20px;
+    color: #ffffff;
+}
+
+#footer-reisfotos {
+    margin-top: 0px;
+}
+
+/******* End-Footer *******/
+
+
+/****** Media Queries ******/
+
+@media only screen and (min-width: 900px) {
+
+
+    /****** Main-Auto-Vakantie ******/
+
+    .table-mobile {
+        display: none;
+    }
+
+    .table-desktop {
+        display: table;
+        margin: 30px auto;
+    }
+
+    /****** End-Main-Auto-Vakantie ******/
+
+}
+
+
+@media only screen and (min-width: 50rem) {
+
+    /******* Header *******/
+
+
+    .header-home {
+        height: 70vh;
+    }
+
+    header {
+        height: auto;
+    }
+
+    #background-auto-vakantie {
+        height: 30vh;
+        background-image: url(../img/jason-blackeye-373356-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+    }
+
+    #background-bestemmingen {
+        height: 30vh;
+        background-image: url(../img/lauren-kay-322320-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    #background-reisfotos {
+        height: 30vh;
+        background-image: url(../img/stefano-bernardo-662863-unsplash.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    input[type=checkbox],
+    .show-menu {
+        display: none;
+    }
+
+    nav {
+        background-color: #286266;
+        position: static;
+    }
+
+    nav div {
+        position: relative;
+        max-width: 65rem;
+        margin: 0 auto;
+    }
+
+    .logo {
+        top: 18px;
+        left: 30px;
+    }
+
+    .navigatie {
+        margin: 0;
+        height: 70px;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .navigatie li {
+        background-color: #286266;
+        border: none;
+        margin: 0 15px;
+    }
+
+    .navigatie li a {
+        height: 70px;
+        margin: 0 15px;
+    }
+
+    li:hover ul a {
+        margin: 0;
+    }
+
+    .navigatie li:nth-child(2) ul {
+        display: none;
+    }
+
+    .navigatie li:nth-child(2):hover ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navigatie li:nth-child(2) ul li {
+        margin: 0;
+        z-index: 1;
+    }
+
+    li:hover ul a {
+        background-color: #286266 !important;
+        color: #ffffff !important;
+    }
+
+    li:hover ul a:hover {
+        background-color: #efefef !important;
+        color: #474747 !important;
+    }
+
+
+    /******* End-Header *******/
+
+
+    /******* Main-Content-Home *******/
+
+    main {
+        max-width: 65rem;
+        margin: 0 auto;
+    }
+
+    .section-media h2 {
+        padding: 0 1.5%;
+    }
+
+    .section-content {
+        display: flex;
+        margin: 20px;
+        padding: 0 1.5%;
+    }
+
+    .section-content div {
+        padding-right: 100px;
+    }
+
+    .section-content h1 {
+        font-size: 22px;
+    }
+
+    .section-media {
+        margin: 60px 20px 60px 20px;
+    }
+
+    .border {
+        border-top: 1px solid black;
+        width: 97%;
+        transform: translateX(1.5%);
+    }
+
+    .media-container {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .media-blok {
+        transform: translateX(5%);
+        padding-bottom: 10%;
+        flex: 1 20%;
+        margin-bottom: 25px;
+    }
+
+    iframe,
+    video,
+    .media-blok img {
+        width: 90%;
+        height: 100%;
+    }
+
+
+    .section-three-blok {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0 1.5%;
+    }
+
+    .section-three-blok figure {
+        width: 31%;
+    }
+
+
+    /******* End-Main-Content-Home *******/
+
+
+    /******* Main-Contact *******/
+
+    .google-maps {
+        top: 0px;
+    }
+
+    .section-contact {
+        max-width: 80%;
+        margin: 60px auto;
+    }
+
+    .section-contact h1 {
+        margin: 30px;
+        font-size: 38px;
+    }
+
+
+    .section-contact h1 + p {
+        margin: 30px;
+        font-size: 20px;
+    }
+
+    .section-contact div p {
+        float: left;
+        padding: 0 30px;
+        line-height: 3.5em;
+        color: #b2b2b2;
+    }
+
+    .contact-button-form {
+        border: 1px solid white;
+        color: #474747;
+        float: right;
+        text-transform: uppercase;
+        cursor: pointer;
+        padding: 15px 20px;
+    }
+
+    .section-contact div {
+        margin: 50px 0;
+    }
+
+
+    /******* End-Main-Contact *******/
+
+    /******* Main-Reisfoto's *******/
+
+    .section-reisfotos {
+        margin: 60px auto;
+    }
+
+    .reisfotos-container figure {
+        width: 24.5%;
+        margin: 3px auto;
+    }
+
+
+    .reisfotos-container figure img {
+        width: 100%;
+    }
+
+
+    /******* End-Main-Reisfoto's *******/
+
+    /******* Main-Bestemmingen *******/
+
+
+
+    .bestemmingen-container figure {
+        width: 32%;
+        margin: 5px auto;
+    }
+
+    .bestemmingen-container figure img {
+        display: block;
+        width: 100%;
+    }
+
+
+    /******* End-Main-Bestemmingen *******/
+
+
+
+    /******* Footer *******/
+
+    footer {
+        margin-top: 70px;
+    }
+
+    footer p {
+        font-size: 16px;
+    }
+
+    /******* End-Footer *******/
+}
+
+@media only screen and (min-width: 80rem) {
+
+    /******* Header *******/
+
+    nav div {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    /******* End-Header *******/
+
+    /******* Main-Content-Home *******/
+
+    main {
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+
+    .media-blok {
+        padding-bottom: 10%;
+        transform: translateX(0%);
+        flex: 1;
+    }
+
+    iframe,
+    video,
+    .media-blok img {
+        padding: 0 5%;
+        width: 100%;
+        height: 100%;
+    }
+
+    .section-media h2 {
+        padding: 0 1%;
+    }
+
+    .section-content {
+        padding: 0 1%;
+    }
+
+    .section-three-blok {
+        padding: 0 1%;
+    }
+
+    .border {
+        border-top: 1px solid black;
+        width: 98%;
+        transform: translateX(1%);
+    }
+
+
+    /******* End-Main-Content-Home *******/
+
+    /******* Main-Auto-Vakantie *******/
+
+    .section-autovakantie-table h1 {
+        max-width: 68%;
+        margin: 20px auto;
+    }
+
+    .section-autovakantie-table p {
+        max-width: 44%;
+        margin: 20px 16% 50px 16%;
+        font-size: 16px;
+    }
+
+    /******* End-Main-Auto-Vakantie *******/
+
+
+}

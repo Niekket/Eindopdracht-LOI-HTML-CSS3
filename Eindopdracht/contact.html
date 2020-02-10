@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Eindopdracht Vakantie</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <a href="index.html" class="logo">Reisfoto's
+                </a>
+                <input type="checkbox" id="show-menu" role="button">
+                <label for="show-menu" class="show-menu">Menu</label>
+                <ul class="navigatie">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="bestemmingen.html">Bestemmingen ￬</a>
+                        <ul>
+                            <li><a href="#">Griekenland</a></li>
+                            <li><a href="#">Spanje</a></li>
+                            <li><a href="#">Frankrijk</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="auto-vakantie.html">Auto vakantie</a></li>
+                    <li><a href="reisfoto's.html">Reisfoto's</a></li>
+                    <li class="current-page"><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <iframe class="google-maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504548.7610218795!2d3.031308241647142!3d52.19162830495457!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c609c3db87e4bb%3A0xb3a175ceffbd0a9f!2sNederland!5e0!3m2!1snl!2snl!4v1537284158904" width="600" height="450" style="border:0" allowfullscreen></iframe>
+    <main>
+        <section class="section-contact">
+            <h1>Zeg gedag!</h1>
+            <p>Eenvoudig contact opnemen.</p>
+            <form action="http://jkorpela.fi/cgi-bin/echo.cgi" method="post" id="formulier">
+                <label for="name">Naam</label>
+                <span class="required"></span><input required type="text" id="name" name="name" placeholder="Naam">
+                <label for="email">Email</label>
+                <span class="required"></span><input required type="email" id="email" name="email" placeholder="Email">
+                <label for="phone">Telefoonnummer</label>
+                <input type="tel" id="phone" name="phone" placeholder="Telefoonnummer" title="Een telefoonnummer bestaat uit 10 cijfers">
+                <label for="message">Bericht</label>
+                <span class="required"></span><textarea required name="message" id="message" cols="30" rows="10" placeholder="Bericht"></textarea>
+                <div>
+                    <p>Velden met een * zijn verplicht</p>
+                    <button type="submit" class="contact-button-form">Verzenden<span>▶</span></button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with ♥ by Niek Stoevenbelt 2018</p>
+    </footer>
+</body>
+
+</html>
